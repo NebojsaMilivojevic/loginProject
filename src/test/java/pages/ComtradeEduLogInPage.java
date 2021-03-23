@@ -55,8 +55,8 @@ public class ComtradeEduLogInPage extends BaseHelper
     public String getErrorMessage()
     {
         wdWait.until(ExpectedConditions.presenceOfElementLocated(By.className("error")));
-        WebElement errorMassage = driver.findElement(By.className("error"));
-        String message = errorMassage.getText();
+        WebElement errorMessage = driver.findElement(By.className("error"));
+        String message = errorMessage.getText();
         System.out.println("Error message after unsuccessful log in is: " + message);
         return message;
     }
