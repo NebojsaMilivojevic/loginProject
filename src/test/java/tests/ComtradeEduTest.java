@@ -21,7 +21,8 @@ public class ComtradeEduTest extends BaseTest
         logInPage.inputFields(userName, password);
 
         ComtradeEduUserPage userPage = new ComtradeEduUserPage(driver);
-        Assert.assertTrue("Unsuccessful login!",userPage.getUserName().contains("Nebojša Milivojević"));
+        Assert.assertTrue("Unsuccessful login!", userPage.getUserName().contains("Nebojša Milivojević"));
+
     }
 
     @Test
@@ -29,9 +30,10 @@ public class ComtradeEduTest extends BaseTest
     {
         ComtradeEduHomePage homePage = new ComtradeEduHomePage(driver);
         homePage.logIn();
+
         ComtradeEduLogInPage logInPage = new ComtradeEduLogInPage(driver);
         logInPage.inputFields(userName, "");
 
-        Assert.assertTrue("Something went wrong!",logInPage.getErrorMassage().contains("Invalid login, please try again"));
+        Assert.assertTrue("Something went wrong!",logInPage.getErrorMessage().contains("Invalid login, please try again"));
     }
 }

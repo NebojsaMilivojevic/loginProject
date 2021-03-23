@@ -23,7 +23,7 @@ public class ComtradeEduHomePage extends BaseHelper
     public void logIn ()
     {
         navigateToComtradeEduHomePage();
-        clickOnLogInButton ();
+        clickOnLogInButton();
     }
 
     private void navigateToComtradeEduHomePage ()

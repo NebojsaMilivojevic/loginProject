@@ -1,7 +1,6 @@
 package pages;
 
 import helpers.BaseHelper;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,7 +24,7 @@ public class ComtradeEduUserPage extends BaseHelper
     {
         wdWait.until(ExpectedConditions.visibilityOf(userHeader));
         String userName = userHeader.getText();
-        System.out.println(userName);
+        System.out.println("User name is: " + userName);
         return userName;
     }
 

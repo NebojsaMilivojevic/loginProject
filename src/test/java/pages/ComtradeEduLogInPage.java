@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import tests.BaseTest;
 
 public class ComtradeEduLogInPage extends BaseHelper
 {
@@ -53,12 +52,12 @@ public class ComtradeEduLogInPage extends BaseHelper
         logInButton.click();
     }
 
-    public String getErrorMassage ()
+    public String getErrorMessage()
     {
         wdWait.until(ExpectedConditions.presenceOfElementLocated(By.className("error")));
         WebElement errorMassage = driver.findElement(By.className("error"));
-        String massage = errorMassage.getText();
-        System.out.println(massage);
-        return massage;
+        String message = errorMassage.getText();
+        System.out.println("Error message after unsuccessful log in is: " + message);
+        return message;
     }
 }
